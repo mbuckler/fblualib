@@ -139,10 +139,10 @@ echo
 echo 'Installing TH++'
 echo
 
-# Hack to download the correct file
-wget "http://downloads.sourceforge.net/project/mxedeps/gtest-1.7.0.zip?r=&ts=1479505909&use_mirror=kent"
 
 cd $dir/thpp/thpp
+# Hack to download the correct file
+wget "http://downloads.sourceforge.net/project/mxedeps/gtest-1.7.0.zip?r=&ts=1479505909&use_mirror=kent"
 ./build.sh
 
 echo
