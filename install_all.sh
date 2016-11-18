@@ -127,7 +127,8 @@ echo
 cd $dir/fbthrift/thrift
 autoreconf -ivf
 ./configure
-if [ $current -eq 1 ]; then
+# Hack to try to install in Ubuntu 14.04
+if [ 1 -eq 1 ]; then #if [ $current -eq 1 ]; then
     pushd lib/cpp2/fatal/internal
     ln -s folly_dynamic-inl-pre.h folly_dynamic-inl.h
     popd
