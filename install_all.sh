@@ -95,9 +95,9 @@ if [ $current -eq 1 ]; then
 else
     git clone -b v0.35.0  --depth 1 https://github.com/facebook/folly
     git clone -b v0.24.0  --depth 1 https://github.com/facebook/fbthrift
-    # Old version of thpp contains an error
+    # Old version of thpp contains an error, replace with my version
     #git clone -b v1.0 https://github.com/facebook/thpp
-    git clone https://github.com/facebook/thpp
+    git clone https://github.com/mbuckler/thpp
     git clone -b v1.0 https://github.com/facebook/fblualib
 fi
 
