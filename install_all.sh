@@ -39,8 +39,6 @@ else
     exit 1
 fi
 
-# Hack to see if this works
-current=1
 
 dir=$(mktemp --tmpdir -d fblualib-build.XXXXXX)
 
@@ -97,7 +95,9 @@ if [ $current -eq 1 ]; then
 else
     git clone -b v0.35.0  --depth 1 https://github.com/facebook/folly
     git clone -b v0.24.0  --depth 1 https://github.com/facebook/fbthrift
-    git clone -b v1.0 https://github.com/facebook/thpp
+    # Old version of thpp contains an error
+    #git clone -b v1.0 https://github.com/facebook/thpp
+    git clone https://github.com/facebook/thpp
     git clone -b v1.0 https://github.com/facebook/fblualib
 fi
 
