@@ -127,8 +127,7 @@ echo
 cd $dir/fbthrift/thrift
 autoreconf -ivf
 ./configure
-# Hack to try to install in Ubuntu 14.04
-if [ 1 -eq 1 ]; then #if [ $current -eq 1 ]; then
+if [ $current -eq 1 ]; then
     pushd lib/cpp2/fatal/internal
     ln -s folly_dynamic-inl-pre.h folly_dynamic-inl.h
     popd
@@ -139,6 +138,9 @@ sudo make install
 echo
 echo 'Installing TH++'
 echo
+
+# Hack to download the correct file
+wget "http://downloads.sourceforge.net/project/mxedeps/gtest-1.7.0.zip?r=&ts=1479505909&use_mirror=kent"
 
 cd $dir/thpp/thpp
 ./build.sh
