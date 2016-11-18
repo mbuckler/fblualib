@@ -39,6 +39,9 @@ else
     exit 1
 fi
 
+# Hack to see if this works
+current=1
+
 dir=$(mktemp --tmpdir -d fblualib-build.XXXXXX)
 
 echo Working in $dir
@@ -141,8 +144,6 @@ echo
 
 
 cd $dir/thpp/thpp
-# Hack to download the correct file
-wget "http://downloads.sourceforge.net/project/mxedeps/gtest-1.7.0.zip?r=&ts=1479505909&use_mirror=kent"
 ./build.sh
 
 echo
